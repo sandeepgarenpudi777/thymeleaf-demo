@@ -13,7 +13,7 @@ public class EmpController {
 	@Autowired
 	private EmpService service;
 	
-	@GetMapping("/employees")
+	@GetMapping
 	public String list(Model model) {
 		model.addAttribute("emps",service.getAll());
 		return "getemps";
